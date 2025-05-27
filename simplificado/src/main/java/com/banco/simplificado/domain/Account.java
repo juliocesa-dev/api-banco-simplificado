@@ -1,5 +1,6 @@
 package com.banco.simplificado.domain;
 
+import com.banco.simplificado.audit.AuditEntity;
 import com.banco.simplificado.enums.AccountType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -14,10 +15,7 @@ import java.math.BigDecimal;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(uniqueConstraints = {
-        @UniqueConstraint(columnNames = {"user_id", "account_type"})
-})
-public class Account {
+public class Account extends AuditEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

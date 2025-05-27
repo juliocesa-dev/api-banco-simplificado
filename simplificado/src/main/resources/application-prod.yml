@@ -3,8 +3,3 @@ spring:
     url: ${DATABASE_URL_PROD}
     username: ${DATABASE_USERNAME_PROD}
     password: ${DATABASE_PASSWORD_PROD}
-
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
